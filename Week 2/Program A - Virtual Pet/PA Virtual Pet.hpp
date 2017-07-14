@@ -15,6 +15,10 @@ using namespace std;    // don't modify
 */
 void DisplayPetStats( string petName, int hungerPercent, int happinessPercent, int healthPercent )
 {
+	string petName = Maharajah;
+	int hungerPercent = 77;
+	int happinessPercent = 92;
+	int healthPercent = 100;
 	cout << "Name:       " << petName << endl;
 	cout << "Hunger:     " << hungerPercent << endl;
 	cout << "Happiness:  " << happinessPercent << endl;
@@ -64,10 +68,9 @@ void DrawPet( int healthPercent )
 */
 int GetChoice( int min, int max )
 {
-	int choice;
-	cin >> choice;
 	while (choice < min || choice > max)
 	{
+		int choice;
 		cout << "Your selection is invalid.  Please re-enter your selection." << endl;
 		cin >> choice;
 	}
@@ -93,33 +96,16 @@ int GetChoice( int min, int max )
     @param <int&> healthPercent      The health amount, between 0 - 100%; this is a reference parameter
     @return <void>                   No return information
 */
-void UpdatePet(int& hungerPercent, int& happinessPercent, int& healthPercent)
+void UpdatePet( int& hungerPercent, int& happinessPercent, int& healthPercent )
 {
-	hungerPercent = hungerPercent + 5;
-	if (hungerPercent > 75)
-	{
-		healthPercent = healthPercent - 10;
-		happinessPercent = happinessPercent - 10;
-	}
-	else if (hungerPercent > 50 && hungerPercent <= 75)
-	{
-		healthPercent = healthPercent - 5;
-		happinessPercent = happinessPercent - 5;
-	}
-	else if (hungerPercent > 25 && hungerPercent <= 50)
-	{
-		healthPercent = healthPercent - 2;
-		happinessPercent = happinessPercent - 2;
-	}
 
-	if (hungerPercent > 100)
-	{
-		hungerPercent = 100;
-	}
-	else if (hungerPercent < 0)
-	{
-		hungerPercent = 0;
-	}
+	if (hungerPercent > 75)
+
+	else if (hungerPercent > 50 && hungerPercent <= 75)
+
+	else if (hungerPercent > 25 && hungerPercent <= 50)
+
+	else 
 
 }
 
@@ -132,11 +118,6 @@ void UpdatePet(int& hungerPercent, int& happinessPercent, int& healthPercent)
 */
 void Feed( int& hungerPercent )
 {
-	hungerPercent = hungerPercent - 8;
-	if (hungerPercent < 0)
-	{
-		hungerPercent = 0;
-	}
 }
 
 /**
@@ -145,14 +126,8 @@ void Feed( int& hungerPercent )
 
     @param <int&> happinessPercent   The happiness amount, between 0 - 100%; this is a reference parameter
     @return <void>                   No return information
-
 */void Play( int& happinessPercent )
 {
-	happinessPercent = happinessPercent + 5;
-	if (happinessPercent > 100)
-	{
-		happinessPercent = 100;
-	}
 }
 
 /**
@@ -164,11 +139,6 @@ void Feed( int& hungerPercent )
 */
 void Heal( int& healthPercent )
 {
-	healthPercent = healthPercent + 5;
-	if (healthPercent > 100)
-	{
-		healthPercent = 100;
-	}
 }
 
 #endif // don't modify
