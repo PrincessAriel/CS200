@@ -15,26 +15,24 @@ int main()
 	cin >> choice;
 	switch (choice)
 	{
-	case '1':
+	case 1:
 		cout << a + b << endl;
 	break;
 
-	case '2':
+	case 2:
 		cout << a - b << endl;
 	break;
 
-	case '3':
+	case 3:
 		cout << a * b << endl;
 	break;
 
-	case '4':
+	case 4:
 		cout << a / b << endl;
 	break;
 
-
 	default:
-		cout << "Invalid choice." << endl;
-
+		cout << "Invalid choice" << endl;
 	}
 
 	while ( true ) ;
